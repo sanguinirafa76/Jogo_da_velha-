@@ -1,10 +1,10 @@
-# 🎮 Jogo da Velha — Assembly 8086
+# Jogo da Velha — Assembly 8086
 
 Implementação completa do clássico **Jogo da Velha (Tic-Tac-Toe)** em linguagem Assembly para o processador Intel 8086, desenvolvido como projeto avaliativo da disciplina de **Organização de Sistemas Computacionais** na PUC-Campinas (2025).
 
 ---
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 O programa simula o jogo da velha em modo texto, permitindo partidas entre **dois jogadores humanos** ou entre um **jogador humano e o computador**. Todo o código foi escrito em Assembly 8086 puro, explorando manipulação direta de memória, registradores, pilha e interrupções do DOS/BIOS.
 
@@ -13,50 +13,62 @@ O programa simula o jogo da velha em modo texto, permitindo partidas entre **doi
 ## 📁 Estrutura do Repositório
 
 ```
-├── projeto1_OS.asm       # Código-fonte em Assembly 8086
-├── projeto1_OS.exe       # Executável compilado (MS-DOS)
+├── Código
+├     ├─ Jogo_da_velha.asm       # Código-fonte em Assembly 8086
+├
 └── README.md
 ```
 
 ---
 
-## ⚙️ Como Compilar
+## Como Compilar
 
 Você precisará do **MASM** ou **TASM** instalado em um ambiente MS-DOS (ou emulador).
 
 **Com MASM:**
 ```
-MASM projeto1_OS.asm;
-LINK projeto1_OS.obj;
+MASM Jogo_da_velha.asm;
+LINK Jogo_da_velha.obj;
 ```
 
 **Com TASM:**
 ```
-TASM projeto1_OS.asm
-TLINK projeto1_OS.obj
+TASM Jogo_da_velha.asm
+TLINK Jogo_da_velha.obj
 ```
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 **No MS-DOS:**
 ```
-projeto1_OS.exe
+Jogo_da_velha.exe
 ```
 
 **No Windows moderno (via [DOSBox](https://www.dosbox.com)):**
 ```
 mount c c:\caminho\para\a\pasta
 c:
-projeto1_OS.exe
+Jogo_da_velha.exe
 ```
 
 > Requisitos mínimos: MS-DOS ou emulador compatível · Processador Intel 8086 ou superior · 64 KB de RAM
 
 ---
 
-## 🕹️ Como Jogar
+**OU**
+```
+1- Faça o fork do projeto dentro do Github para o seu dispositivo
+2- Baixe o MASM/TASM dentro do VSCode (assim fica possível a ultilização de códigos Assembly)
+3- Abra o arquivo que foi salvo
+4- Abra o arquivo "Jogo_da_velha.asm" no VSCode
+5- Aperte com o botão direito do mouse na tela do código
+6- Selecione a opção "Run ASM code"
+7- Aproveite o jogo!!
+```
+
+## Como Jogar
 
 ### 1. Tela inicial
 
@@ -117,7 +129,7 @@ Jogar novamente? (S/N): _
 
 ---
 
-## 🤖 Inteligência Artificial (modo PvC)
+## Inteligência Artificial (modo PvC)
 
 No modo Jogador vs Computador, o computador joga como `O` e segue esta ordem de prioridade:
 
@@ -128,7 +140,7 @@ No modo Jogador vs Computador, o computador joga como `O` e segue esta ordem de 
 
 ---
 
-## 🏗️ Arquitetura e Módulos
+## Arquitetura e Módulos
 
 O programa usa o modelo `.MODEL SMALL` e está organizado em procedimentos independentes:
 
@@ -184,7 +196,7 @@ ADD AL, BH   ; AL = índice final
 
 ---
 
-## 💡 Conceitos de Assembly Aplicados
+## Conceitos de Assembly Aplicados
 
 - **Saltos condicionais** — `JE`, `JNE`, `JL`, `JG`, `JB`, `JA` para controle de fluxo
 - **Sub-rotinas** — mais de 30 procedimentos com `CALL` / `RET`
@@ -195,7 +207,7 @@ ADD AL, BH   ; AL = índice final
 
 ---
 
-## 🏆 Dicas Estratégicas
+## Dicas Estratégicas
 
 - **Centro primeiro** — a posição (2,2) cobre 4 linhas de vitória possíveis
 - **Cantos são fortes** — posições (1,1), (1,3), (3,1) e (3,3) cobrem diagonais
@@ -204,7 +216,7 @@ ADD AL, BH   ; AL = índice final
 
 ---
 
-## 📚 Referências
+## Referências
 
 - ABEL, Peter. *IBM PC Assembly Language and Programming*. 5ª ed. Pearson, 2001.
 - INTEL CORPORATION. *8086 Family User's Manual*. Intel Corporation, 1979.
@@ -212,9 +224,26 @@ ADD AL, BH   ; AL = índice final
 
 ---
 
-## 👤 Autor
+## Autor
 
-**Rafael Sanguini Colagrossi** — RA: 25007599  
-Disciplina: Organização de Sistemas Computacionais  
-Professor: Ricardo Pannain  
-PUC-Campinas · 2025
+<div align="center">
+
+Desenvolvido por **Rafael Sanguini Colagrossi**
+
+<br>
+
+&nbsp;&nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-perfil)
+&nbsp;
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/seu-usuario)
+&nbsp;
+[![Portfolio](https://img.shields.io/badge/Portfolio-dc2626?style=flat&logo=vercel&logoColor=white)](#)
+&nbsp;
+[![Gmail](https://img.shields.io/badge/rafaelcolagrossi%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:rafaelcolagrossi@gmail.com)
+
+</div>
+
+---
+
+
+**Se este projeto te ajudou, deixa uma ⭐ no repositório — significa muito!**
